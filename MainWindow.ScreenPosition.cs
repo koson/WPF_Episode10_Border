@@ -3,7 +3,7 @@ using System.Windows;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 
-namespace WpfDemoTemplate
+namespace WPF_Episode10_Border
 {
     /// <summary>
     /// Partial class for handling screen position
