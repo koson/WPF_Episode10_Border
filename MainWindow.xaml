@@ -5,8 +5,77 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Episode10_Border"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="WPF Episode 10: Border Demo" Height="600" Width="1000">
+    
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Navigation Panel -->
+        <Border Grid.Column="0" Background="#2C3E50" Padding="10">
+            <StackPanel>
+                <TextBlock Text="Border Demos" 
+                           FontSize="16" FontWeight="Bold" 
+                           Foreground="White" Margin="0,0,0,20"/>
+                
+                <Button Content="1. Basic Border" Click="ShowBasicBorder" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="2. BorderThickness" Click="ShowBorderThickness" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="3. CornerRadius" Click="ShowCornerRadius" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="4. Backgrounds" Click="ShowBackgrounds" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="5. Card Designs" Click="ShowCards" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="6. Alert Messages" Click="ShowAlerts" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="7. Gradients" Click="ShowGradients" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="8. Padding vs Margin" Click="ShowPaddingMargin" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="9. Advanced" Click="ShowAdvanced" 
+                        Margin="0,5" Padding="10,5"/>
+            </StackPanel>
+        </Border>
+        
+        <!-- Content Panel -->
+        <ScrollViewer Grid.Column="1" x:Name="ContentPanel" 
+                      VerticalScrollBarVisibility="Auto" 
+                      Background="#ECF0F1">
+            <Border Background="White" Margin="20" Padding="30" 
+                    CornerRadius="10">
+                <StackPanel>
+                    <TextBlock Text="Welcome to Border Demo" 
+                               FontSize="28" FontWeight="Bold" 
+                               Margin="0,0,0,20"/>
+                    
+                    <TextBlock TextWrapping="Wrap" FontSize="14" Margin="0,10">
+                        Border is a decorator control that draws a border, background, 
+                        or both around a child element. It's one of the most commonly 
+                        used controls for creating modern UI designs.
+                    </TextBlock>
+                    
+                    <TextBlock TextWrapping="Wrap" FontSize="14" Margin="0,10">
+                        Click any button on the left to see different Border demos!
+                    </TextBlock>
+                    
+                    <Border Background="LightBlue" Padding="15" Margin="0,20" 
+                            CornerRadius="5" BorderBrush="Blue" BorderThickness="1">
+                        <StackPanel>
+                            <TextBlock Text="Key Features:" FontWeight="Bold" 
+                                       FontSize="16" Margin="0,0,0,10"/>
+                            <TextBlock Text="• BorderBrush and BorderThickness" Margin="0,5"/>
+                            <TextBlock Text="• CornerRadius for rounded corners" Margin="0,5"/>
+                            <TextBlock Text="• Background with colors or gradients" Margin="0,5"/>
+                            <TextBlock Text="• Padding for internal spacing" Margin="0,5"/>
+                            <TextBlock Text="• Can contain only one child" Margin="0,5"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
     </Grid>
 </Window>
